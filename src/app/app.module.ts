@@ -10,13 +10,27 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { LoginComponent } from './Components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './Components/pagenotfound/pagenotfound.component';
+import { IntroComponent } from './Components/intro/intro.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { ClinicHistoryComponent } from './Components/clinic-history/clinic-history.component';
+import { PaymentsComponent } from './Components/payments/payments.component';
+import { SchedulHoursComponent } from './Components/schedul-hours/schedul-hours.component';
+import { Services1Component } from './Components/services1/services1.component';
+import { TeamComponent } from './Components/team/team.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    IntroComponent,
+    FooterComponent,
+    ClinicHistoryComponent,
+    PaymentsComponent,
+    SchedulHoursComponent,
+    Services1Component,
+    TeamComponent,
   ],
   imports: [
     BrowserModule,
