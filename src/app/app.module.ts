@@ -17,6 +17,7 @@ import { PaymentsComponent } from './Components/payments/payments.component';
 import { SchedulHoursComponent } from './Components/schedul-hours/schedul-hours.component';
 import { Services1Component } from './Components/services1/services1.component';
 import { TeamComponent } from './Components/team/team.component';
+import { MainComponent } from './Components/main/main.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { TeamComponent } from './Components/team/team.component';
     SchedulHoursComponent,
     Services1Component,
     TeamComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
