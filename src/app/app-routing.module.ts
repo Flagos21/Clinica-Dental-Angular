@@ -5,7 +5,7 @@ import { PagenotfoundComponent } from './Components/pagenotfound/pagenotfound.co
 import { combineLatest } from 'rxjs';
 import { MainComponent } from './Components/main/main.component';
 import { IntroComponent } from './Components/intro/intro.component';
-import { SchedulHoursComponent } from './Components/schedul-hours/schedul-hours.component';
+import { ScheduleHoursComponent } from './Components/schedule-hours/schedule-hours.component';
 import { Services1Component } from './Components/services1/services1.component';
 import { TeamComponent } from './Components/team/team.component';
 import { PaymentsComponent } from './Components/payments/payments.component';
@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'main', component: MainComponent},
   {path: 'login', component: LoginComponent},
   {path: 'intro', component: IntroComponent},
-  {path: 'schedul-hours', component: SchedulHoursComponent},
+  {path: 'schedule-hours', component: ScheduleHoursComponent},
   {path: 'services', component: Services1Component},
   {path: 'team', component: TeamComponent},
   {path: 'payments', component: PaymentsComponent},
@@ -34,4 +34,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

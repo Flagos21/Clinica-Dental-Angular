@@ -14,10 +14,11 @@ import { IntroComponent } from './Components/intro/intro.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ClinicHistoryComponent } from './Components/clinic-history/clinic-history.component';
 import { PaymentsComponent } from './Components/payments/payments.component';
-import { SchedulHoursComponent } from './Components/schedul-hours/schedul-hours.component';
+import { ScheduleHoursComponent } from './Components/schedule-hours/schedule-hours.component';
 import { Services1Component } from './Components/services1/services1.component';
 import { TeamComponent } from './Components/team/team.component';
 import { MainComponent } from './Components/main/main.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,13 @@ import { MainComponent } from './Components/main/main.component';
     FooterComponent,
     ClinicHistoryComponent,
     PaymentsComponent,
-    SchedulHoursComponent,
+    ScheduleHoursComponent,
     Services1Component,
     TeamComponent,
     MainComponent,
   ],
   imports: [
+    FullCalendarModule,
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp({ 
