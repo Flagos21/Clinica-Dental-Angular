@@ -17,6 +17,8 @@ import { PaymentsComponent } from './Components/payments/payments.component';
 import { SchedulHoursComponent } from './Components/schedul-hours/schedul-hours.component';
 import { Services1Component } from './Components/services1/services1.component';
 import { TeamComponent } from './Components/team/team.component';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { TeamComponent } from './Components/team/team.component';
       measurementId: "G-9895JQMZMJ"
     }),
     ReactiveFormsModule,
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]
