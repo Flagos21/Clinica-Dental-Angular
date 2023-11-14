@@ -10,18 +10,19 @@ import { Services1Component } from './Components/services1/services1.component';
 import { TeamComponent } from './Components/team/team.component';
 import { PaymentsComponent } from './Components/payments/payments.component';
 import { ClinicHistoryComponent } from './Components/clinic-history/clinic-history.component';
+import { RegisterComponent } from './Components/register/register.component';
 
 const routes: Routes = [
 
   {path: '', redirectTo: 'main', pathMatch: 'full'},
   {path: 'main', component: MainComponent},
-  {path: 'login', component: LoginComponent},
   {path: 'intro', component: IntroComponent},
   {path: 'schedule-hours', component: ScheduleHoursComponent},
   {path: 'services', component: Services1Component},
   {path: 'team', component: TeamComponent},
   {path: 'payments', component: PaymentsComponent},
   {path: 'clinic-history', component: ClinicHistoryComponent},
+  {path: 'register', component: RegisterComponent},
 
   //  Rutas 404
   {path: '404', component: PagenotfoundComponent},
