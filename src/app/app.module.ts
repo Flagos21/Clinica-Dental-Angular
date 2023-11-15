@@ -44,7 +44,6 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
