@@ -13,6 +13,10 @@ import { PaymentsComponent } from './Components/payments/payments.component';
 import { ScheduleHoursComponent } from './Components/schedule-hours/schedule-hours.component';
 import { Services1Component } from './Components/services1/services1.component';
 import { TeamComponent } from './Components/team/team.component';
+<<<<<<< HEAD
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+=======
 import { MainComponent } from './Components/main/main.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -22,6 +26,7 @@ import { RegisterComponent } from './Components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
+>>>>>>> frontend
 
 @NgModule({
   declarations: [
@@ -44,10 +49,15 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+<<<<<<< HEAD
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+=======
     
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
+>>>>>>> frontend
   ],
   providers: [],
   bootstrap: [AppComponent]
