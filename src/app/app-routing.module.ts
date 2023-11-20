@@ -14,7 +14,7 @@ import { RegisterComponent } from './Components/register/register.component';
 
 const routes: Routes = [
 
-  {path: '', redirectTo: 'main', pathMatch: 'full'},
+  {path: '', redirectTo: 'schedule-hours', pathMatch: 'full'},
   {path: 'main', component: MainComponent},
   {path: 'intro', component: IntroComponent},
   {path: 'schedule-hours', component: ScheduleHoursComponent},
