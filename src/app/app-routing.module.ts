@@ -22,6 +22,7 @@ const routes: Routes = [
   {path: 'team', component: TeamComponent},
   {path: 'payments', component: PaymentsComponent},
   {path: 'clinic-history', component: ClinicHistoryComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
 
   //  Rutas 404
