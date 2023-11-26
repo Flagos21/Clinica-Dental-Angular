@@ -1,6 +1,5 @@
 <p>clinic-history works!</p>
 <!-- <app-navbar></app-navbar> -->
-<app-list-clinic-history></app-list-clinic-history>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,8 +88,14 @@
                         <textarea class="form-control" cols="30" rows="10" formControlName="descripcion" placeholder="Descripcion Tratamiento..."></textarea>
                     </div>
                     
-
-                    <input type="submit" value="Enviar" class="btn btn-info">
+                    <div class="text-center">
+                        <button type="text" class="btn btn-danger mr-3" routerLink="/list-clinic-history">Cancelar</button>
+                        <button type="submit" class="btn btn-info">Enviar</button>
+                    </div>
+                    
+                    
+                    <!-- <input type="submit" value="Enviar" class="btn btn-info">
+                    <input type="text" value="Cancelar" class="btn btn-info"> -->
 
               <!-- <button class="btn btn-lg btn-success btn-block text-uppercase" type="submit">Nuevo usuario Médico</button>
               <button class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">Nuevo usuario Paciente</button>
