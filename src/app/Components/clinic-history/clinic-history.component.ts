@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup} from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 import { Router } from '@angular/router';
 import { FichaClinicaService } from 'src/app/Services/ficha-clinica.service';
 
@@ -14,20 +14,21 @@ export class ClinicHistoryComponent implements OnInit{
   
   constructor(
     private fichaClinica: FichaClinicaService,
+    private formBuilder: FormBuilder,
     private router: Router
   ){
-    this.formulario = new FormGroup({
-      id_RUN: new FormControl(),
-      nombres: new FormControl(),
-      apellidos: new FormControl(),
-      fecha_nacimiento: new FormControl(),
-      direccion: new FormControl(),
-      telefono: new FormControl(),
-      telefono_emergencia: new FormControl(),
-      email: new FormControl(),
-      alergias: new FormControl(),
-      descripcion: new FormControl()
-    })
+    this.formulario = this.formBuilder.group({
+      id_RUN: ['', Validators.required],
+      nombres: ['', Validators.required],
+      apellidos: ['', Validators.required],
+      fecha_nacimiento: ['', Validators.required],
+      direccion: ['', Validators.required],
+      telefono: ['', Validators.required],
+      telefono_emergencia: ['', Validators.required],
+      email: ['', Validators.required],
+      alergias: ['', Validators.required],
+      descripcion: ['', Validators.required]
+    });
   }
 
   ngOnInit(): void {
@@ -35,8 +36,16 @@ export class ClinicHistoryComponent implements OnInit{
 
   async onSubmit(){
     console.log(this.formulario.value);
-    const response = await this.fichaClinica.addFicha(this.formulario.value);
-    console.log(response);
+    if (this.formulario.valid) {
+      await this.fichaClinica.addFicha(this.formulario.value);
+      this.formulario.reset();
+      alert("Datos enviados correctamente")
+    console.log(Response);
+  } else {
+    console.log('Complete los campos')
+    alert("Complete todos los campos")
   }
+  
+}
 
 }
