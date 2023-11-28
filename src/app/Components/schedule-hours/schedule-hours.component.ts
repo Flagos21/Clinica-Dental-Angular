@@ -5,6 +5,11 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
+import { FormControl, FormGroup } from '@angular/forms';
+import { OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CalendarioService } from 'src/app/Services/Calendario';
+
 
 @Component({
   selector: 'app-root',
@@ -43,7 +48,7 @@ export class ScheduleHoursComponent {
   });
   currentEvents = signal<EventApi[]>([]);
 
-  constructor(private changeDetector: ChangeDetectorRef) {
+  constructor(private changeDetector: ChangeDetectorRef, private schedulehours: CalendarioService ) {
   }
 
   handleCalendarToggle() {
@@ -70,6 +75,14 @@ export class ScheduleHoursComponent {
         end: selectInfo.endStr,
         allDay: selectInfo.allDay
       });
+      // Agregar el evento a Firebase
+      this.schedulehours.obtenerEventos(calendarApi)
+        .then(() => {
+          // Actualizar la vista del calendario
+          this.calendarOptions.events = [...this.calendarOptions.events, calendarApi];
+          this.handleEvents(this.calendarOptions.events);
+        })
+        .catch(error => console.error('Error al agregar el evento a Firebase', error));
     }
   }
 
@@ -83,4 +96,6 @@ export class ScheduleHoursComponent {
     this.currentEvents.set(events);
     this.changeDetector.detectChanges(); // workaround for pressionChangedAfterItHasBeenCheckedError
   }
+
+  
 }
