@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    background-color:blue; /* Fondo blanco */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Fondo gris claro para los inputs */
+    border-radius: 8px;
+  }
+  
+  input[type="date"],
+  input[type="time"] {
+    margin: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Borde gris */
+  }
+  
+  input[type="date"],
+  input[type="time"] {
+    width: 200px; /* Ancho de los inputs */
+  }
+  
