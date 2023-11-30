@@ -50,7 +50,7 @@ export class LoginRegisterComponent {
     this.authService.login(this.formLogin.value)
       .then(response => {
         console.log(response);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/main']);
       })
       .catch(error => console.log(error));
   }
