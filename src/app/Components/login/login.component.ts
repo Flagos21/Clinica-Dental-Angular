@@ -1,55 +1,38 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/Services/auth.service';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from '../../Services/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  showPassword: boolean = false;
-  loginForm: FormGroup;
-  checkValidEmail: boolean = false;
+export class LoginComponent implements OnInit{
+
+
+  formLogin: FormGroup;
 
   constructor(
-    private formsBuilder: FormBuilder,
-    private authService: AuthService,
+    private router: Router,
+    private userService: AuthService
   ) {
-    this.loginForm = this.formsBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
-    });
+    this.formLogin = new FormGroup({
+      email: new FormControl(),
+      password: new FormControl()
+    })
   }
-  loginWithEmail() {
-    if (this.loginForm.valid) {
-      if (this.loginForm.get('email')?.valid) {
-        if (this.loginForm.value.password.length >= 6) {
-          this.authService.loginWithEmail({
-            email: this.loginForm.value.email,
-            password: this.loginForm.value.password,
-          });
-        } else {
-         
-            {
-              
-            }
-          ;
-        }
-        } else {
 
-          {
-           
-          }
-        ;
-      }
-    } else {
- 
-        {
-          
-        }
-      ;
-    }
+  ngOnInit(): void {
   }
+
+  onSubmit() {
+    this.userService.login(this.formLogin.value)
+      .then(response => {
+        console.log(response);
+        this.router.navigate(['/home']);
+      })
+      .catch(error => console.log(error));
+  }
+
 }
