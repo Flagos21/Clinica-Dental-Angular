@@ -58,7 +58,7 @@
 
 /* mouse grab icon */
 .grabbing { 
-    cursor:url(grabbing.png) 8 8, move;
+    /* cursor:url(grabbing.png) 8 8, move; */
 }
 
 /* fix */
@@ -88,7 +88,7 @@
   color: #FFF;
   display: inline-block;
   zoom: 1;
-  *display: inline;/*IE7 life-saver */
+  display: inline;/*IE7 life-saver */
   margin: 5px;
   padding: 3px 10px;
   font-size: 12px;
@@ -112,7 +112,7 @@
 .owl-theme .owl-controls .owl-page{
   display: inline-block;
   zoom: 1;
-  *display: inline;/*IE7 life-saver */
+  display: inline;/*IE7 life-saver */
 }
 .owl-theme .owl-controls .owl-page span{
   display: block;
@@ -145,7 +145,7 @@
 /* preloading images */
 .owl-item.loading{
   min-height: 150px;
-  background: url(AjaxLoader.gif) no-repeat center center
+  /* background: url(AjaxLoader.gif) no-repeat center center */
 }
 
 .owl-schedule .owl-controls {
