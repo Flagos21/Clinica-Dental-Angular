@@ -8,6 +8,7 @@ import { INITIAL_EVENTS, createEventId } from './event-utils';
 import { OnInit } from '@angular/core';
 import Calendario from 'src/app/Interfaces/Calendario.interface';
 import { CalendarioService } from 'src/app/Services/Calendario';
+import { startOfDay } from '@fullcalendar/core/internal';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,34 @@ export class ScheduleHoursComponent implements OnInit {
   listarHora: Calendario[]=[];
   calendarVisible = signal(true);
   events: CalendarioService[]=[];
+  calendarOptions1: CalendarOptions = {
+    plugins: [
+      interactionPlugin,
+      dayGridPlugin,
+      timeGridPlugin,
+      listPlugin,
+    ],
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+    },
+    initialView: 'dayGridMonth',
+    initialEvents:this.listarHora, // alternatively, use the `events` setting to fetch from a feed
+    weekends: true,
+    editable: true,
+    selectable: true,
+    selectMirror: true,
+    dayMaxEvents: true,
+    select: this.handleDateSelect.bind(this), //este selecciona los datos
+    eventClick: this.handleEventClick.bind(this), //este borra los datos
+    eventsSet: this.handleEvents.bind(this) //este no me acuerdo
+    /* you can update a remote database when these fire:
+    eventAdd:
+    eventChange:
+    eventRemove:
+    */
+  };
   calendarOptions = signal<CalendarOptions>({
     plugins: [
       interactionPlugin,
@@ -25,6 +54,26 @@ export class ScheduleHoursComponent implements OnInit {
       timeGridPlugin,
       listPlugin,
     ],
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+    },
+    initialView: 'dayGridMonth',
+    initialEvents:this.listarHora, // alternatively, use the `events` setting to fetch from a feed
+    weekends: true,
+    editable: true,
+    selectable: true,
+    selectMirror: true,
+    dayMaxEvents: true,
+    select: this.handleDateSelect.bind(this), //este selecciona los datos
+    eventClick: this.handleEventClick.bind(this), //este borra los datos
+    eventsSet: this.handleEvents.bind(this) //este no me acuerdo
+    /* you can update a remote database when these fire:
+    eventAdd:
+    eventChange:
+    eventRemove:
+    */
   });
   
 
@@ -76,16 +125,20 @@ export class ScheduleHoursComponent implements OnInit {
   }
 
   handleEventClick(clickInfo: EventClickArg) {
-    if (confirm(`Estas seguro de eliminar este evento '${clickInfo.event.title}'`)) {
-      clickInfo.event.remove();
+    this.calendarService.obtenerHoras().subscribe(doc =>{
+      this.listarHora=[];
+      doc.forEach((element:any)=>{
+        this.listarHora.push({
+          id: element.payload.id,
+          ...element.payload.doc.data()
+        });
+        console.log(element.payload.doc.id)
+       // console.log(element.payload.doc.data())
      
+    this.calendarService.eliminarHora(element.payload.doc.id);
+  })
     
-    console.log(this.listarHora)
-    console.log(clickInfo.event.title)
-    const eventNameToFind = clickInfo.event.title;
-    const encontrado = this.listarHora.find(evento => evento.title === eventNameToFind);
-    console.log(encontrado)
-    }
+})
   }
 
   handleEvents(events: EventApi[]) {
@@ -94,19 +147,21 @@ export class ScheduleHoursComponent implements OnInit {
    
   }
   obtenerHora(){
-    this.calendarService.obtenerHora().subscribe(doc =>{
+    this.calendarService.obtenerHoras().subscribe(doc =>{
       this.listarHora=[];
       doc.forEach((element:any)=>{
         this.listarHora.push({
           id: element.payload.id,
           ...element.payload.doc.data()
         });
-       // console.log(element.payload.doc.id)
+        console.log(element.payload.doc.id)
        // console.log(element.payload.doc.data())
       })
-     // console.log(this.listarHora)
+    
     })
+    
   }
+
  
   
 }

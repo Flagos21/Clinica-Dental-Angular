@@ -1,4 +1,5 @@
 export default interface Calendario {
+    [x: string]: any;
     id: string;
     title: string;
     start: string;
