@@ -13,6 +13,7 @@ import { ClinicHistoryComponent } from './Components/clinic-history/clinic-histo
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginRegisterComponent } from './Components/login-register/login-register.component';
 import { ListClinicHistoryComponent } from './Components/list-clinic-history/list-clinic-history.component';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
 
@@ -20,9 +21,9 @@ const routes: Routes = [
   {path: '', redirectTo: 'main', pathMatch: 'full'},
   {path: 'main', component: MainComponent},
   {path: 'intro', component: IntroComponent},
-  {path: 'schedule-hours', component: ScheduleHoursComponent},
+  {path: 'schedule-hours', component: ScheduleHoursComponent, ...canActivate(() => redirectUnauthorizedTo(['/login-register']))},
   {path: 'services', component: Services1Component},
-  {path: 'team', component: TeamComponent},
+  {path: 'team', component: TeamComponent },
   {path: 'payments', component: PaymentsComponent},
   {path: 'list-clinic-history', component: ListClinicHistoryComponent},
   {path: 'clinic-history', component: ClinicHistoryComponent},
