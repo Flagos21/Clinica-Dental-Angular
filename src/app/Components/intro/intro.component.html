@@ -1,7 +1,30 @@
-<h6>ola</h6>
-<h2> Hora usuario</h2>
-<div class="container">
-  <p>Selecicone hora:</p>
-<input type="date" value="2023-11-28" />
-<input type="time" name="hora" id="hora" />
+<div class="main-container">
+  <div class="options">
+    <h2>Elegir Funcionario</h2>
+    <select id="funcionario">
+      <option value="funcionario1">Funcionario 1</option>
+      <option value="funcionario2">Funcionario 2</option>
+      <option value="funcionario3">Funcionario 3</option>
+    </select>
+  </div>
+  <div class="content">
+    <h1 class="titulo">Hora usuario</h1>
+    <div class="container">
+      <p>Seleccione hora:</p>
+      <input type="date" value="2023-11-28" />
+      <select id="ampm">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select>
+      <input type="time" id="horaInput" (change)="mostrarSoloHoras($event)">
+      <input type="email" placeholder="correo" />
+      <input type="tel" placeholder="+569"  maxlength="12">
+      <div>
+        <input type="button" value="Enviar" />
+      </div>
+    </div>
+    <br>
+    
+  </div>
 </div>
+

@@ -1,32 +1,232 @@
-body {
-    margin: 0;
-    padding: 0;
+  .main-container {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100vh;
-    background-color:blue; /* Fondo blanco */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .options {
+    flex: 1;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .funcionario-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .funcionario-select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ffffff; /* Borde más grueso y blanco */
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Color del texto */
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .container input,
+  .container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+  }
+
+
+
+  .main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .options {
+    flex: 1;
+    padding: 20px;
+    background-color: #E7EAEC ;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .funcionario-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .funcionario-select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ffffff; /* Borde más grueso y blanco */
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Color del texto */
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .container input,
+  .container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+  }
+
+
+  .main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .options {
+    flex: 1;
+    padding: 20px;
+    background-color: #E7EAEC ;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .funcionario-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .funcionario-select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ffffff; /* Borde más grueso y blanco */
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Color del texto */
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: #6BC2FF;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .container input,
+  .container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+  }
+  ::ng-deep body {
+    background-image: url('C:\clinica\Clinica-Dental-Angular\src\imagenes\clinica.webp');
+    background-size: cover;
+    background-position: center;
+  }
+  .main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto; /* Aumenta el margen superior e inferior para centrar más */
+  }
+  
+  .options {
+    flex: 1;
+    padding: 20px;
+    background-color: #E7EAEC;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+  }
+  
+  .funcionario-title {
+    font-size: 36px; /* Aumenta el tamaño del título */
+    margin-bottom: 20px; /* Mayor espacio inferior para separar el título */
+  }
+  
+  .funcionario-select {
+    width: 80%; /* Reducir el ancho para centrar más */
+    padding: 15px; /* Aumentar el relleno */
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: white;
+    font-size: 24px; /* Aumentar el tamaño del texto */
+    font-weight: bold;
+    text-align: center; /* Centrar el texto dentro del select */
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: #6BC2FF;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f0f0f0; /* Fondo gris claro para los inputs */
-    border-radius: 8px;
+    width: 100%;
   }
   
-  input[type="date"],
-  input[type="time"] {
-    margin: 10px;
+  .container input,
+  .container select {
+    width: 100%;
     padding: 8px;
+    margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc; /* Borde gris */
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
   }
-  
-  input[type="date"],
-  input[type="time"] {
-    width: 200px; /* Ancho de los inputs */
-  }
-  
