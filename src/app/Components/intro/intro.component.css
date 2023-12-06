@@ -169,7 +169,7 @@
     box-sizing: border-box;
   }
   ::ng-deep body {
-    background-image: url('C:\clinica\Clinica-Dental-Angular\src\imagenes\clinica.webp');
+    background-image: url('../../../assets/img/clinica.webp');
     background-size: cover;
     background-position: center;
   }
