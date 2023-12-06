@@ -1,30 +1,46 @@
 <div class="main-container">
   <div class="options">
     <h2>Elegir Funcionario</h2>
-    <select id="funcionario">
-      <option value="funcionario1">Funcionario 1</option>
-      <option value="funcionario2">Funcionario 2</option>
-      <option value="funcionario3">Funcionario 3</option>
-    </select>
+    <form [formGroup]="form">
+      <select id="funcionario" formControlName="funcionario">
+        <option value="Doctor Fabian">Doctor Fabian</option>
+        <option value="Doctor Patricio">Doctor Patricio</option>
+        <option value="Doctor Pedro">Doctor Pedro</option>
+      </select>
+    </form>
   </div>
+
   <div class="content">
     <h1 class="titulo">Hora usuario</h1>
-    <div class="container">
-      <p>Seleccione hora:</p>
-      <input type="date" value="2023-11-28" />
-      <select id="ampm">
-        <option value="AM">AM</option>
-        <option value="PM">PM</option>
-      </select>
-      <input type="time" id="horaInput" (change)="mostrarSoloHoras($event)">
-      <input type="email" placeholder="correo" />
-      <input type="tel" placeholder="+569"  maxlength="12">
-      <div>
-        <input type="button" value="Enviar" />
+    <form [formGroup]="form" (ngSubmit)="crearHora()">
+      <div class="container">
+        <p>Seleccione hora:</p>
+        <input type="date" formControlName="date" value="2023-11-28" />
+        <input type="time" formControlName="time" id="horaInput" step="3600" (change)="mostrarSoloHoras($event)">
+        <input type="email" formControlName="email" placeholder="correo" />
+        <input type="tel" formControlName="tel" placeholder="+569" maxlength="12">
+        <div>
+          <button class="btn primary" type="submit">Primary</button>
+        </div>
       </div>
-    </div>
-    <br>
+    </form>
+
     
+
+    <!-- Mensajes de éxito y error -->
+    <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
   </div>
+  
+</div>
+<!-- Calendario -->
+<div class="calendario-container">
+  <full-calendar
+[options]="calendarOptions"
+[events]="listHoras"
+[className]="listHoras"
+></full-calendar>
 </div>
 
+ 
+ 
