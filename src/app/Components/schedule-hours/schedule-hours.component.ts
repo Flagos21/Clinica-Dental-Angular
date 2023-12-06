@@ -83,4 +83,5 @@ export class ScheduleHoursComponent {
     this.currentEvents.set(events);
     this.changeDetector.detectChanges(); // workaround for pressionChangedAfterItHasBeenCheckedError
   }
+
 }
