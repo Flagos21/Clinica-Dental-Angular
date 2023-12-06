@@ -12,6 +12,7 @@ import { PaymentsComponent } from './Components/payments/payments.component';
 import { ClinicHistoryComponent } from './Components/clinic-history/clinic-history.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginRegisterComponent } from './Components/login-register/login-register.component';
+import { ListClinicHistoryComponent } from './Components/list-clinic-history/list-clinic-history.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'services', component: Services1Component},
   {path: 'team', component: TeamComponent},
   {path: 'payments', component: PaymentsComponent},
+  {path: 'list-clinic-history', component: ListClinicHistoryComponent},
   {path: 'clinic-history', component: ClinicHistoryComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},

@@ -1,1 +1,116 @@
 <p>clinic-history works!</p>
+<!-- <app-navbar></app-navbar> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Historia Clínica</title>
+
+ Bootstrap CSS 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+
+<!-- Project CSS 
+    <link href="css/project.css" rel="stylesheet">
+-->
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+             <!-- Background image for card set in CSS! -->
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center">Crear Ficha Clínica</h5>
+            <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+                <div class="info-container">
+                    <div class="mb-3">
+                        <label class="form-label">RUN</label>
+                        <input type="text" class="form-control" formControlName="id_RUN">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Nombres</label>
+                        <input type="text" class="form-control" formControlName="nombres">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" formControlName="apellidos">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Fecha de Nacimiento</label>
+                        <input type="text" class="form-control" formControlName="fecha_nacimiento">
+                    </div>
+                    
+                <!-- <div class="form-label-group">
+                        <label>Género</label>
+                        <br>
+                    <label for="male">Femenino</label>
+                    <input type="radio" name="gender" id="male" value="mujer" checked>
+                    <label for="female">Masculino</label>
+                    <input type="radio" name="gender" id="female" value="hombre">
+                </div> -->
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Dirección</label>
+                        <input type="text" class="form-control" formControlName="direccion">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" formControlName="telefono">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Teléfono de Emergencia</label>
+                        <input type="text" class="form-control" formControlName="telefono_emergencia">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Correo electrónico</label>
+                        <input type="text" class="form-control" formControlName="email">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Alergias</label>
+                        <textarea class="form-control" cols="30" rows="10" formControlName="alergias" placeholder="Alergias..."></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Descripción</label>
+                        <textarea class="form-control" cols="30" rows="10" formControlName="descripcion" placeholder="Descripcion Tratamiento..."></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="text" class="btn btn-danger mr-3" routerLink="/list-clinic-history">Cancelar</button>
+                        <button type="submit" class="btn btn-info">Enviar</button>
+                    </div>
+                    
+                    
+                    <!-- <input type="submit" value="Enviar" class="btn btn-info">
+                    <input type="text" value="Cancelar" class="btn btn-info"> -->
+
+              <!-- <button class="btn btn-lg btn-success btn-block text-uppercase" type="submit">Nuevo usuario Médico</button>
+              <button class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">Nuevo usuario Paciente</button>
+              <a class="d-block text-center mt-2 small" href="#">o Ingresar con cuenta existente</a> -->
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

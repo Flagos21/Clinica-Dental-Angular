@@ -25,6 +25,7 @@ import { environment } from '../environments/environment';
 import { LoginRegisterComponent } from './Components/login-register/login-register.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { ListClinicHistoryComponent } from './Components/list-clinic-history/list-clinic-history.component';
 
 
 
@@ -43,6 +44,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     TeamComponent,
     MainComponent,
     RegisterComponent,
+    ListClinicHistoryComponent,
     LoginRegisterComponent,
   ],
   imports: [

@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "clinicadental-808bd"
+  },
+  "targets": {
+    "clinicadental-808bd": {
+      "hosting": {
+        "Clinica-Dental-Angular": [
+          "clinicadental-808bd"
+        ]
+      }
+    }
   }
 }
