@@ -17,8 +17,8 @@ export class CalendarioService {
   obtenerHora(): Observable<any>{
     return this.firebase.collection('CalendarioHora').snapshotChanges()
   }
-  eliminarHora(encontrado: Calendario): Promise<any>{
-    return this.firebase.collection('CalendarioHora').doc(encontrado.id).delete();
+  eliminarHora(element: Calendario): Promise<any>{
+    return this.firebase.collection('CalendarioHora').doc(element.id).delete();
   }
   
 }
