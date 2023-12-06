@@ -17,6 +17,7 @@ import { CalendarioService } from 'src/app/Services/Calendario';
 export class ScheduleHoursComponent implements OnInit {
   listarHora: Calendario[]=[];
   calendarVisible = signal(true);
+  events: CalendarioService[]=[];
   calendarOptions = signal<CalendarOptions>({
     plugins: [
       interactionPlugin,
@@ -24,26 +25,6 @@ export class ScheduleHoursComponent implements OnInit {
       timeGridPlugin,
       listPlugin,
     ],
-    headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-    },
-    initialView: 'dayGridMonth',
-    initialEvents:INITIAL_EVENTS, // alternatively, use the `events` setting to fetch from a feed
-    weekends: true,
-    editable: true,
-    selectable: true,
-    selectMirror: true,
-    dayMaxEvents: true,
-    select: this.handleDateSelect.bind(this), //este selecciona los datos
-    eventClick: this.handleEventClick.bind(this), //este borra los datos
-    eventsSet: this.handleEvents.bind(this) //este no me acuerdo
-    /* you can update a remote database when these fire:
-    eventAdd:
-    eventChange:
-    eventRemove:
-    */
   });
   
 
