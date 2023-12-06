@@ -57,9 +57,7 @@
 }
 
 /* mouse grab icon */
-.grabbing { 
-    cursor:url(grabbing.png) 8 8, move;
-}
+
 
 /* fix */
 .owl-carousel  .owl-wrapper,
@@ -145,7 +143,7 @@
 /* preloading images */
 .owl-item.loading{
   min-height: 150px;
-  background: url(AjaxLoader.gif) no-repeat center center
+  background: url(/AjaxLoader.gif) no-repeat center center
 }
 
 .owl-schedule .owl-controls {

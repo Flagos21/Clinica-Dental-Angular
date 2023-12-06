@@ -1,173 +1,3 @@
-  .main-container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .options {
-    flex: 1;
-    padding: 20px;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-  }
-
-  .funcionario-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .funcionario-select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #ffffff; /* Borde más grueso y blanco */
-    background-color: transparent; /* Fondo transparente */
-    color: white; /* Color del texto */
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .content {
-    flex: 1;
-    padding: 20px;
-    background-color: blue;
-    color: white;
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-  }
-
-  .container {
-    width: 100%; /* Ocupa todo el ancho disponible */
-  }
-
-  .container input,
-  .container select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #cccccc;
-    box-sizing: border-box;
-  }
-
-
-
-  .main-container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .options {
-    flex: 1;
-    padding: 20px;
-    background-color: #E7EAEC ;
-    color: white;
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-  }
-
-  .funcionario-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .funcionario-select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #ffffff; /* Borde más grueso y blanco */
-    background-color: transparent; /* Fondo transparente */
-    color: white; /* Color del texto */
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .content {
-    flex: 1;
-    padding: 20px;
-    background-color: blue;
-    color: white;
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-  }
-
-  .container {
-    width: 100%; /* Ocupa todo el ancho disponible */
-  }
-
-  .container input,
-  .container select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #cccccc;
-    box-sizing: border-box;
-  }
-
-
-  .main-container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .options {
-    flex: 1;
-    padding: 20px;
-    background-color: #E7EAEC ;
-    color: white;
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-  }
-
-  .funcionario-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .funcionario-select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #ffffff; /* Borde más grueso y blanco */
-    background-color: transparent; /* Fondo transparente */
-    color: white; /* Color del texto */
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .content {
-    flex: 1;
-    padding: 20px;
-    background-color: #6BC2FF;
-    color: white;
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-  }
-
-  .container {
-    width: 100%; /* Ocupa todo el ancho disponible */
-  }
-
-  .container input,
-  .container select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #cccccc;
-    box-sizing: border-box;
-  }
   ::ng-deep body {
     background-image: url('../../../assets/img/clinica.webp');
     background-size: cover;
@@ -183,7 +13,7 @@
     flex: 1;
     padding: 20px;
     background-color: #E7EAEC;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra los elementos horizontalmente */
@@ -201,7 +31,7 @@
     border-radius: 8px;
     border: 2px solid #ffffff;
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 24px; /* Aumentar el tamaño del texto */
     font-weight: bold;
     text-align: center; /* Centrar el texto dentro del select */
@@ -211,7 +41,7 @@
     flex: 1;
     padding: 20px;
     background-color: #6BC2FF;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -229,4 +59,117 @@
     border-radius: 5px;
     border: 1px solid #cccccc;
     box-sizing: border-box;
+    color: rgb(0, 0, 0);
   }
+  .btn {
+    border: none; 
+    color: black; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+  }
+  
+  .primary {background-color: white; border: 2px solid #007bff;} 
+  .primary:hover {background: #0b7dda; color: white;}
+  
+  .secondary {background-color: white; border: 2px solid #e7e7e7;} 
+  .secondary:hover {background: #ddd; color: white;}
+  
+  .error-message {
+    background-color: #f8d7da;  /* Fondo rojo claro */
+    border: 1px solid #f5c6cb;  /* Borde rojo */
+    color: #721c24;  /* Texto oscuro */
+    padding: 15px; /* Aumentamos el espacio interno */
+    margin-top: 15px; /* Aumentamos el espacio superior */
+    border-radius: 8px; /* Redondeamos más las esquinas */
+    font-size: 16px; /* Aumentamos el tamaño de fuente */
+    text-align: center; /* Centramos el texto */
+    max-width: 400px; /* Limitamos el ancho máximo */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregamos una sombra suave */
+  }
+  
+  .error-message::before {
+    content: "⚠ "; /* Agregamos un icono de advertencia antes del texto */
+    font-size: 20px;
+  }
+  .success-message {
+    background-color: #d4edda;  /* Fondo verde claro */
+    border: 1px solid #c3e6cb;  /* Borde verde */
+    color: #155724;  /* Texto oscuro */
+    padding: 15px; /* Aumentamos el espacio interno */
+    margin-top: 15px; /* Aumentamos el espacio superior */
+    border-radius: 8px; /* Redondeamos más las esquinas */
+    font-size: 16px; /* Tamaño de fuente */
+    text-align: center; /* Centramos el texto */
+    max-width: 400px; /* Limitamos el ancho máximo */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregamos una sombra suave */
+  }
+  
+  .success-message::before {
+    content: "✔ "; /* Agregamos un icono de marca de verificación antes del texto */
+    font-size: 20px;
+  }
+  .calendario-container {
+    margin-top: 20px; /* Espacio en la parte superior */
+    padding: 20px; /* Relleno interno */
+    border: 1px solid #ccc; /* Borde con color gris claro */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color:#ffffff;
+    color:black;
+    width: 50%;
+    height: 50%
+  }
+  .fullcalendar-toolbar-title {
+    color: black; /* Color del título */
+  }
+  
+  .fullcalendar-event-title {
+    color: black;
+    width:1px /* Color del texto de los eventos */
+  }
+  .fc-event-title-container {
+    color: black; /* Color del texto dentro de los eventos */
+    width: 20px;
+  }
+  .fc-h-event {
+    background-color: var(--fc-event-bg-color);
+    border: 1px solid var(--fc-event-border-color);
+    display: block;
+    width: 10px;
+}
+.fc-h-event .fc-event-main {
+  color: var(--fc-event-text-color);
+  width: 10%;
+}
+
+
+.fc .fc-button:not(:disabled) {
+  cursor: pointer;
+}
+
+.fc .fc-button-primary {
+  background-color: var(--fc-button-bg-color);
+  border-color: var(--fc-button-border-color);
+  color: var(--fc-button-text-color);
+}
+
+@media(max-width: 767px) {
+  .fc-toolbar.fc-header-toolbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .fc-toolbar.fc-header-toolbar .fc-left {
+    order: 3;
+  }
+  .fc-toolbar.fc-header-toolbar .fc-center {
+    order: 1;
+  }
+  .fc-toolbar.fc-header-toolbar .fc-right {
+    order: 2;
+  }
+}
