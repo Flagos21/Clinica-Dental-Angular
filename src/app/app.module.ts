@@ -22,8 +22,12 @@ import { RegisterComponent } from './Components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
+import { LoginRegisterComponent } from './Components/login-register/login-register.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ListClinicHistoryComponent } from './Components/list-clinic-history/list-clinic-history.component';
-import { AngularFireModule } from "@angular/fire/compat";
+
+
 
 @NgModule({
   declarations: [
@@ -41,13 +45,17 @@ import { AngularFireModule } from "@angular/fire/compat";
     MainComponent,
     RegisterComponent,
     ListClinicHistoryComponent,
+    LoginRegisterComponent,
   ],
   imports: [
-    FullCalendarModule,
     BrowserModule,
+    FullCalendarModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideFirebaseApp(() => initializeApp(environment.firebase)),

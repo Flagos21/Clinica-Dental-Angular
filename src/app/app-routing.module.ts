@@ -11,11 +11,13 @@ import { TeamComponent } from './Components/team/team.component';
 import { PaymentsComponent } from './Components/payments/payments.component';
 import { ClinicHistoryComponent } from './Components/clinic-history/clinic-history.component';
 import { RegisterComponent } from './Components/register/register.component';
+import { LoginRegisterComponent } from './Components/login-register/login-register.component';
 import { ListClinicHistoryComponent } from './Components/list-clinic-history/list-clinic-history.component';
 
 const routes: Routes = [
 
-  {path: '', redirectTo: 'schedule-hours', pathMatch: 'full'},
+  // Rutas Componentes
+  {path: '', redirectTo: 'main', pathMatch: 'full'},
   {path: 'main', component: MainComponent},
   {path: 'intro', component: IntroComponent},
   {path: 'schedule-hours', component: ScheduleHoursComponent},
@@ -24,8 +26,9 @@ const routes: Routes = [
   {path: 'payments', component: PaymentsComponent},
   {path: 'list-clinic-history', component: ListClinicHistoryComponent},
   {path: 'clinic-history', component: ClinicHistoryComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: '**', redirectTo: 'pagenotfound', pathMatch: 'full'},
+  {path: 'login-register', component: LoginRegisterComponent},
 
   //  Rutas 404
   {path: '404', component: PagenotfoundComponent},
